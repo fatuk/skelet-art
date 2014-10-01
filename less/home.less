@@ -1,0 +1,55 @@
+.home {
+	position: relative;
+	width: 100%;
+	min-height: 800px;
+	text-align: center;
+	margin: 0 auto;
+	background: url('../img/video.jpg') no-repeat;
+	background-size: cover;
+	&__container {
+		display: inline-block;
+		width: 920px;
+		height: 320px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -(920px / 2);
+		margin-top: -(320px / 2) - 50px;
+	}
+	&__title {
+		margin: 0;
+		font-size: 17px;
+		font-weight: normal;
+		color: #fff;
+		text-transform: uppercase;
+		margin-bottom: 120px;
+	}
+	&__subtitle {
+		display: block;
+		width: 910px;
+		margin: 0 auto;
+		font-size: 55px;
+		font-weight: normal;
+		line-height: 60px;
+		color: #fff;
+		.futuraLight();
+	}
+	&__down {
+		display: block;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -(180px / 2);
+		width: 180px;
+		text-decoration: none;
+	}
+	&__down-img {
+		width: 25px;
+	}
+	&__down-text {
+		display: inline-block;
+		text-transform: uppercase;
+		color: #05BBFC;
+		margin-bottom: 45px;
+	}
+}
