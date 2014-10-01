@@ -16,6 +16,6 @@
   "dependencies": {
     "jquery": "1.11.1",
     "3l": "~1.4.4",
-    "normalize-css": "~3.0.1"
+    "normalize-less": "*"
   }
 }
