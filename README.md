@@ -1,4 +1,4 @@
-scelet-art
+skelet-art
 ==========
 
-Static prototype -- Scelet Art
+Static prototype -- Skelet Art
