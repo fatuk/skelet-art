@@ -8,5 +8,3 @@ default:
   - 'watch'
 svg:
   - 'svgmin'
-  - 'svgstore'
-  - 'replace'
