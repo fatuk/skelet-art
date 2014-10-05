@@ -1,46 +1,50 @@
 .home {
 	position: relative;
 	width: 100%;
-	min-height: 800px;
+	// min-height: 800px;
 	text-align: center;
 	margin: 0 auto;
-	background: url('../img/video.jpg') no-repeat;
+	overflow: hidden;
+	background: url('../img/video.jpg');
 	background-size: cover;
 	&__container {
 		display: inline-block;
 		width: 920px;
-		height: 320px;
+		height: 430px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-left: -(920px / 2);
-		margin-top: -(320px / 2) - 50px;
+		margin-top: -(430px / 2) - 60px;
 	}
 	&__title {
 		margin: 0;
-		font-size: 17px;
+		font-size: 23px;
 		font-weight: normal;
 		color: #fff;
 		text-transform: uppercase;
-		margin-bottom: 120px;
+		margin-bottom: 20px;
+		.futuraLight();
+		letter-spacing: 7px;
 	}
 	&__subtitle {
 		display: block;
-		width: 910px;
+		width: 900px;
 		margin: 0 auto;
+		margin-bottom: 75px;
 		font-size: 55px;
+		.futuraLight();
 		font-weight: normal;
 		line-height: 60px;
 		color: #fff;
-		.futuraLight();
 	}
 	&__down {
 		display: block;
 		position: absolute;
 		bottom: 20px;
 		left: 50%;
-		margin-left: -(180px / 2);
-		width: 180px;
+		margin-left: -(400px / 2);
+		width: 400px;
 		text-decoration: none;
 	}
 	&__down-img {
