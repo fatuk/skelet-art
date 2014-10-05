@@ -33,10 +33,6 @@ $(function() {
                 'width': this.windowWidth,
                 'height': this.windowHeight
             });
-            this.$('#homeBgVideo').css({
-                // 'width': this.windowWidth,
-                // 'height': this.windowHeight
-            });
         },
         resize: function(e) {
             var self = this;
