@@ -17,6 +17,7 @@
     "jquery": "1.11.1",
     "3l": "~1.4.4",
     "normalize-less": "*",
-    "backbone": "~1.1.2"
+    "backbone": "~1.1.2",
+    "jQuery-Open-Carousel": "git@github.com:justinmc/jQuery-Open-Carousel.git#~1.1.0"
   }
 }
