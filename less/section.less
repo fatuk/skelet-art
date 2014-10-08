@@ -6,4 +6,20 @@
 		width: 720px;
 		margin: 0 auto;
 	}
+	&_form {
+		background: url('../img/contacts-background.jpg');
+		background-size: cover;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #1585b9;
+			opacity: .84;
+			z-index: 1;
+		}
+	}
 }

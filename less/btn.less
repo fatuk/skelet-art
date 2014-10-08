@@ -8,10 +8,27 @@
 	border: solid 1px #00bbf7;
 	border-radius: 5px;
 	text-decoration: none;
-	transition: color .3s, border .3s;
+	transition: color .3s, border .3s, opacity .3s;
+	background: none;
 	.futuraLight();
 	&:hover {
 		color: #fff;
 		border-color: #fff;
+	}
+	&:active {
+		opacity: .8;
+	}
+	&_white {
+		border-color: #fff;
+		color: #fff;
+		&:hover {
+			color: lighten(#00bbf7, 10%);
+			border-color: lighten(#00bbf7, 10%);
+		}
+		&:active {
+			transition: none;
+			color: lighten(#00bbf7, 20%);
+			border-color: lighten(#00bbf7, 20%);
+		}
 	}
 }
