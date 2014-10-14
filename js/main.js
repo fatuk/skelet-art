@@ -31,6 +31,18 @@ $(function() {
                 'top': -300
             });
         },
+        showSkype: function() {
+            self.$('.js-skypeMe').css({
+                'opacity': 1,
+                'right': 10
+            });
+        },
+        hideSkype: function() {
+            self.$('.js-skypeMe').css({
+                'opacity': 0,
+                'right': -300
+            });
+        },
         initialize: function() {
             var self = this;
             this.getSizes();
@@ -43,8 +55,10 @@ $(function() {
             $(window).on('scroll', function(event) {
                 if ($(window).scrollTop() > self.windowHeight - 140) {
                     self.showMenu();
+                    self.showSkype();
                 } else {
                     self.hideMenu();
+                    self.hideSkype();
                 }
             }).trigger('scroll');
 
