@@ -14,29 +14,29 @@
 <body class="js-app">
     <!-- Skype me -->
     <!-- Main menu -->
-<nav class="main-menu">
+<nav class="main-menu js-mainMenu">
 	<div class="main-menu__container">
-		<a href="#" class="main-menu__logo">
+		<a href="#home" class="main-menu__logo">
 			Skelet Art
 		</a>
 		<ul class="main-menu__list">
 			<li class="main-menu__item">
-				<a href="#" class="main-menu__link">
+				<a href="#process" class="main-menu__link">
 					Процесс
 				</a>
 			</li>
 			<li class="main-menu__item">
-				<a href="#" class="main-menu__link">
+				<a href="#projects" class="main-menu__link">
 					Проекты
 				</a>
 			</li>
 			<li class="main-menu__item">
-				<a href="#" class="main-menu__link">
+				<a href="#team" class="main-menu__link">
 					Команда
 				</a>
 			</li>
 			<li class="main-menu__item">
-				<a href="#" class="main-menu__link active">
+				<a href="#contacts" class="main-menu__link active">
 					Контакты
 				</a>
 			</li>
@@ -45,7 +45,7 @@
 </nav>    <!-- Main wrapper -->
     <main class="main">
         <!-- Home section -->
-<section class="home js-home">
+<section class="home js-home" id="home">
 	<video autoplay loop id="homeBgVideo">
 		<source src="video/skelet-art.webm" type="video/webm">
 		<source src="video/skelet-art.mp4" type="video/mp4">
@@ -58,15 +58,15 @@
 		<h2 class="home__subtitle">
 			Дизайн, который не только продает ваше приложение, но и подчеркивает его уникальность.
 		</h2>
-		<a href="#" class="btn">
+		<a href="#" class="btn js-goDownBtn">
 			Как мы работаем
 		</a>
 	</div>
-	<a href="#" class="home__down">
+	<a href="#" class="home__down js-goDownBtn">
 		<img src="img/arrow-down.svg" alt="" class="home__down-img">
 	</a>
 </section>        <!-- Process -->
-<section class="section">
+<section class="section" id="process">
 	<div class="article__inner">
 		<!-- Idea -->
 		<article class="article article_idea">
@@ -159,7 +159,7 @@
 		</li>
 	</ul>
 </section>        <!-- Projects -->
-<section class="section section_projects">
+<section class="section section_projects" id="projects">
 	<!-- Slider -->
 	 <div class="slider ocarousel"
 		data-ocarousel-indicator-fill="#565354"
@@ -222,7 +222,7 @@
 	</div>
 </section>
 <div class="hr hr_no-margin-bottom"></div>        <!-- Team -->
-<section class="section section_team">
+<section class="section section_team" id="team">
 	<article class="article">
 		<h1 class="article__title article__title_center">
 			Команда
@@ -301,7 +301,7 @@
 		</ul>
 	</div>
 </section>        <!-- Form -->
-<section class="section section_form">
+<section class="section section_form" id="contacts">
 	<div class="form">
 		<div class="form__inner">
 			<header class="form__header">
