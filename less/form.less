@@ -1,9 +1,14 @@
 .form {
 	position: relative;
-	width: 840px;
+	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
+	padding-bottom: 100px;
 	z-index: 5;
+	&__inner {
+		width: 840px;
+		margin: 0 auto;
+	}
 	&__header {
 
 	}
@@ -41,6 +46,20 @@
 		margin-top: 43px;
 	}
 	&__footer {
-
+		display: inline-block;
+	}
+	&__footer-text {
+		vertical-align: middle;
+		font-size: 35px;
+		.futuraLight();
+		color: #fff;
+	}
+	&__footer-img {
+		vertical-align: middle;
+		width: 44px;
+		height: 46px;
+		border-radius: 5px;
+		margin-left: 18px;
+		margin-right: 10px;
 	}
 }

@@ -1,9 +1,10 @@
 .btn {
 	display: inline-block;
 	height: 63px;
-	line-height: 63px;
+	line-height: 55px;
 	font-size: 38px;
 	padding: 0 30px;
+	padding-bottom: 5px;
 	color: #00bbf7;
 	border: solid 1px #00bbf7;
 	border-radius: 5px;
@@ -29,6 +30,16 @@
 			transition: none;
 			color: lighten(#00bbf7, 20%);
 			border-color: lighten(#00bbf7, 20%);
+		}
+	}
+	&_black {
+		border-color: rgba(0,0,0,.3);
+		&:hover {
+			border-color: rgba(0,0,0,.8);
+		}
+		&:active {
+			transition: none;
+			border-color: rgba(0,0,0,.5);
 		}
 	}
 }
