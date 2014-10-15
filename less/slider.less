@@ -1,5 +1,5 @@
 .slider {
-	width: 960px;
+	width: 1024px;
 	margin: 0 auto;
 	&__title {
 		font-size: 70px;
@@ -15,6 +15,8 @@
 		top: 50px;
 		opacity: .3;
 		transition: opacity .3s;
+		height: 725px;
+		z-index: 5;
 		&:hover {
 			opacity: 1;
 		}
@@ -23,10 +25,10 @@
 			opacity: .8;
 		}
 		&_left {
-			left: -50px;
+			left: -35px;
 		}
 		&_right {
-			right: -50px;
+			right: -35px;
 		}
 	}
 	&__list {
@@ -34,6 +36,7 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		padding-left: 111px;
 	}
 	&__item {
 		position: relative;
@@ -87,7 +90,7 @@
 		background: #808187;
 	}
 	&__img {
-
+		border-radius: 3px;
 	}
 	&__indicators {
 		padding-top: 55px;
