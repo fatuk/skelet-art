@@ -29,7 +29,7 @@
 <nav class="main-menu js-mainMenu">
 	<div class="main-menu__container">
 		<a href="#home" class="main-menu__logo">
-			Skelet Art
+			<img src="img/logo.svg" alt="" class="main-menu__logo-img">
 		</a>
 		<ul class="main-menu__list">
 			<li class="main-menu__item">
@@ -172,25 +172,31 @@
 	</ul>
 </section>        <!-- Projects -->
 <section class="section section_projects" id="projects">
+	<!-- Arrows -->
+	<a href="#" class="slider__arrow slider__arrow_left js-arrowLeft">
+		<img src="img/arrow-left.svg" alt="" class="slider__arrow-img">
+	</a>
+	<a href="#" class="slider__arrow slider__arrow_right js-arrowRight">
+		<img src="img/arrow-right.svg" alt="" class="slider__arrow-img">
+	</a>
 	<!-- Slider -->
 	 <div class="slider ocarousel"
 		data-ocarousel-indicator-fill="#565354"
 		data-ocarousel-indicator-spacing="10"
 		data-ocarousel-period="50000"
-		data-ocarousel-cycle="true"
+		data-ocarousel-cycle="1"
 		data-ocarousel-indicator-strokewidth="0"
 		data-ocarousel-indicator-stroke="#FEFFFF"
+		data-ocarousel-wrapearly="0"
+		data-ocarousel-perscroll="1"
 		data-ocarousel-indicator-r="6">
+		<!-- Arrows -->
+		<a href="#" data-ocarousel-link="left" class="js-sliderLeft"></a>
+		<a href="#" data-ocarousel-link="right" class="js-sliderRight"></a>
 		<div class="slider__title">
 			<div class="slider__title-text">
 				Проекты
 			</div>
-			<a href="#" data-ocarousel-link="left" class="slider__arrow slider__arrow_left">
-				<img src="img/arrow-left.svg" alt="" class="slider__arrow-img">
-			</a>
-			<a href="#" data-ocarousel-link="right" class="slider__arrow slider__arrow_right">
-				<img src="img/arrow-right.svg" alt="" class="slider__arrow-img">
-			</a>
 		</div>
 		<ul class="slider__list ocarousel_window">
 			<li class="slider__item">
