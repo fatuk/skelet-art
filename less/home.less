@@ -5,9 +5,18 @@
 	margin: 0 auto;
 	overflow: hidden;
 	background: url('../img/video.jpg');
-	// background: transparent no-repeat url('../img/video.jpg');
-	// background-size:100%;
 	background-size: cover;
+	video {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		// z-index: -1000;
+		overflow: hidden
+	}
 	&__container {
 		display: inline-block;
 		width: 920px;

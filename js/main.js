@@ -115,10 +115,10 @@ $(function () {
 			});
 
 			// Slider dots
-			var $dots = this.$('.js-sliderDots');
+			/*var $dots = this.$('.js-sliderDots');
 			console.log($dots.find('circle').eq(0).attr('cx'));
 			console.log(this.carousel.render());
-			this.carousel.remove(1);
+			this.carousel.remove(1);*/
 		},
 		resize: function (e) {
 			var self = this;
