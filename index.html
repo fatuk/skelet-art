@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=1200" />
     <title>Skelet Art</title>
     <link rel="stylesheet" href="css/jquery.openCarousel.css">
+    <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/main.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -14,7 +15,7 @@
 <body class="js-app">
     <!-- Skype me -->
 <div class="skype-me js-skypeMe">
-	<a href="#" class="skype-me__link">
+	<a href="skype:r.solodov" class="skype-me__link">
 		<img src="img/skype.svg" alt="" class="skype-me__img">
 		<span class="skype-me__container">
 			<h3 class="skype-me__title">
@@ -59,8 +60,9 @@
         <!-- Home section -->
 <section class="home js-home" id="home">
 	<video autoplay loop id="homeBgVideo">
-		<source src="video/skelet-art.webm" type="video/webm">
 		<source src="video/skelet-art.mp4" type="video/mp4">
+		<source src="video/skelet-art.ogg" type="video/ogg" />
+		<source src="video/skelet-art.webm" type="video/webm">
 	</video>
 	<div class="home__container">
 		<h1 class="home__title">
@@ -201,7 +203,7 @@
 		<ul class="slider__list ocarousel_window">
 			<li class="slider__item">
 				<div class="slider__info">
-					<a href="#" class="slider__info-link">
+					<a href="img/slides/slide-01.jpg" class="slider__info-link js-colorbox">
 						Детали
 					</a>
 					<div class="slider__info-divider"></div>
@@ -213,7 +215,7 @@
 			</li>
 			<li class="slider__item">
 				<div class="slider__info">
-					<a href="#" class="slider__info-link">
+					<a href="img/slides/slide-01.jpg" class="slider__info-link js-colorbox">
 						Детали
 					</a>
 					<div class="slider__info-divider"></div>
@@ -225,7 +227,7 @@
 			</li>
 			<li class="slider__item">
 				<div class="slider__info">
-					<a href="#" class="slider__info-link">
+					<a href="img/slides/slide-01.jpg" class="slider__info-link js-colorbox">
 						Детали
 					</a>
 					<div class="slider__info-divider"></div>
@@ -365,7 +367,7 @@
 			<img src="img/dribble.svg" alt="" class="site-footer__img">
 		</a>
 		<a href="#" class="btn btn_black">
-			<img src="img/dribble.svg" alt="" class="site-footer__img">
+			<img src="img/facebook.svg" alt="" class="site-footer__img">
 		</a>
 		<p class="site-footer__text">
 			Следите за нами в социальных сетях!

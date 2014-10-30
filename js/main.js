@@ -89,6 +89,11 @@ $(function () {
 
 			// Ocarousel
 			this.carousel = new Ocarousel(this.$('.ocarousel'));
+
+			// Colorbox
+			this.$('.js-colorbox').colorbox({
+				rel: 'gal'
+			});
 		},
 		windowWidth: null,
 		windowHeight: null,
