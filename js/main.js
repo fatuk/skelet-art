@@ -103,10 +103,22 @@ $(function () {
 			this.windowHeight = this.$window.height();
 		},
 		setSizes: function () {
+			// Home
 			this.$('.js-home').css({
 				'width': this.windowWidth,
 				'height': this.windowHeight
 			});
+
+			// Slider
+			this.$('.js-sliderWindow').css({
+				'padding-left': this.windowWidth / 2 - 400
+			});
+
+			// Slider dots
+			var $dots = this.$('.js-sliderDots');
+			console.log($dots.find('circle').eq(0).attr('cx'));
+			console.log(this.carousel.render());
+			this.carousel.remove(1);
 		},
 		resize: function (e) {
 			var self = this;
