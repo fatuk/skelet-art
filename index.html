@@ -351,15 +351,15 @@
 				</p>
 			</header>
 			<div class="form__content">
-				<form action="#">
+				<form action="send-mail.php" method="POST">
 					<div class="form__row">
-						<input type="text" class="input">
+						<input type="text" class="input" placeholder="Имя" name="name" required>
 					</div>
 					<div class="form__row">
-						<input type="text" class="input">
+						<input type="email" class="input" placeholder="E-mail" name="email" required>
 					</div>
 					<div class="form__row">
-						<textarea class="textarea"></textarea>
+						<textarea class="textarea" placeholder="Сообщение" name="message" required></textarea>
 					</div>
 					<input type="submit" value="Отправить" class="btn btn_white">
 				</form>
