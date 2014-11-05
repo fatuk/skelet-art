@@ -129,6 +129,9 @@ $(function () {
 
 			// Get slides count
 			this.slidesCount = this.$('.js-sliderWindow').find('li').length;
+
+			// WOW init
+			new WOW().init();
 		},
 		windowWidth: null,
 		windowHeight: null,
@@ -148,12 +151,6 @@ $(function () {
 			this.$('.js-sliderWindow').css({
 				'padding-left': this.windowWidth / 2 - 400
 			});
-
-			// Slider dots
-			/*var $dots = this.$('.js-sliderDots');
-			console.log($dots.find('circle').eq(0).attr('cx'));
-			console.log(this.carousel.render());
-			this.carousel.remove(1);*/
 		},
 		resize: function (e) {
 			var self = this;
