@@ -131,7 +131,11 @@ $(function () {
 			this.slidesCount = this.$('.js-sliderWindow').find('li').length;
 
 			// WOW init
-			new WOW().init();
+			setTimeout(function () {
+				// Hack for home section
+				self.$('.js-home').find('.wow').show();
+				new WOW().init();
+			}, 1000);
 		},
 		windowWidth: null,
 		windowHeight: null,
