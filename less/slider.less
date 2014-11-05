@@ -22,6 +22,24 @@
 		&_right {
 			right: 62px;
 		}
+		&.disabled {
+			opacity: .3;
+		}
+	}
+	&__arrow-lock {
+		display: none;
+		position: absolute;
+		top: 0;
+		width: 40%;
+		height: 150px;
+		z-index: 10;
+		&_left {
+			left: 0;
+			display: block;
+		}
+		&_right {
+			right: 0;
+		}
 	}
 	&__list {
 		height: 600px;

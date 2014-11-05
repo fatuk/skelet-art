@@ -15,7 +15,7 @@
 <body class="js-app">
     <!-- Skype me -->
 <div class="skype-me js-skypeMe">
-	<a href="skype:r.solodov?call" class="skype-me__link">
+	<a href="skype:r.solodov?add" class="skype-me__link">
 		<img src="img/skype.svg" alt="" class="skype-me__img">
 		<span class="skype-me__container">
 			<h3 class="skype-me__title">
@@ -49,7 +49,7 @@
 				</a>
 			</li>
 			<li class="main-menu__item">
-				<a href="#contacts" class="main-menu__link active">
+				<a href="#contacts" class="main-menu__link">
 					Контакты
 				</a>
 			</li>
@@ -175,10 +175,12 @@
 </section>        <!-- Projects -->
 <section class="section section_projects" id="projects">
 	<!-- Arrows -->
-	<a href="#" class="slider__arrow slider__arrow_left js-arrowLeft">
+	<div class="js-arrowLeftLock slider__arrow-lock slider__arrow-lock_left"></div>
+	<div class="js-arrowRightLock slider__arrow-lock slider__arrow-lock_right"></div>
+	<a href="#" class="slider__arrow slider__arrow_left js-arrowLeft js-arrow disabled">
 		<img src="img/arrow-left.svg" alt="" class="slider__arrow-img">
 	</a>
-	<a href="#" class="slider__arrow slider__arrow_right js-arrowRight">
+	<a href="#" class="slider__arrow slider__arrow_right js-arrowRight js-arrow">
 		<img src="img/arrow-right.svg" alt="" class="slider__arrow-img">
 	</a>
 	<!-- Slider -->
@@ -200,7 +202,20 @@
 				Проекты
 			</div>
 		</div>
+		<span class="ocarousel_pagination_current js-currentSlide hide"></span>
 		<ul class="slider__list ocarousel_window js-sliderWindow">
+			<li class="slider__item">
+				<div class="slider__info">
+					<a href="img/slides/slide-01.jpg" class="slider__info-link js-colorbox">
+						Детали
+					</a>
+					<div class="slider__info-divider"></div>
+					<a href="#" class="slider__info-link">
+						App Store
+					</a>
+				</div>
+				<img class="slider__img" src="img/slides/slide-01.jpg" alt="">
+			</li>
 			<li class="slider__item">
 				<div class="slider__info">
 					<a href="img/slides/slide-01.jpg" class="slider__info-link js-colorbox">

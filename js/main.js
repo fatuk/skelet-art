@@ -4,6 +4,7 @@ $(function () {
 	App.Views = {};
 	App.Collections = {};
 	App.Models = {};
+	App.Router = {};
 
 
 	/*****************
@@ -22,11 +23,34 @@ $(function () {
 		slideLeft: function (e) {
 			e.preventDefault();
 			this.$('.js-sliderLeft').click();
-			console.log(this.carousel.getNext());
+
+			var currentSlide = parseInt(this.$('.js-currentSlide').text(), 10);
+			this.$('.js-arrow').removeClass('disabled');
+			if (currentSlide === 1) {
+				this.$('.js-arrowLeft').addClass('disabled');
+				this.$('.js-arrowLeftLock').show();
+			} else {
+				this.$('.js-arrowLeftLock').hide();
+			}
+			if (currentSlide > 1) {
+				this.$('.js-arrowRightLock').hide();
+			}
 		},
 		slideRight: function (e) {
 			e.preventDefault();
 			this.$('.js-sliderRight').click();
+
+			var currentSlide = parseInt(this.$('.js-currentSlide').text(), 10);
+			this.$('.js-arrow').removeClass('disabled');
+			if (currentSlide === this.slidesCount) {
+				this.$('.js-arrowRight').addClass('disabled');
+				this.$('.js-arrowRightLock').show();
+			} else {
+				this.$('.js-arrowRightLock').hide();
+			}
+			if (currentSlide > 1) {
+				this.$('.js-arrowLeftLock').hide();
+			}
 		},
 		goDown: function (e) {
 			e.preventDefault();
@@ -54,6 +78,7 @@ $(function () {
 				'right': -300
 			});
 		},
+		slidesCount: 0,
 		initialize: function () {
 			var self = this;
 			this.getSizes();
@@ -75,12 +100,12 @@ $(function () {
 
 			// Menu
 			this.$('.js-mainMenu').singlePageNav({
-				offset: $('.js-mainMenu').outerHeight(),
+				offset: $('.js-mainMenu').outerHeight() - 2,
 				filter: ':not(.external)',
 				updateHash: true,
 				currentClass: 'active',
-				beforeStart: function () {
-
+				beforeStart: function (e) {
+					console.log(e);
 				},
 				onComplete: function () {
 
@@ -94,6 +119,9 @@ $(function () {
 			this.$('.js-colorbox').colorbox({
 				rel: 'gal'
 			});
+
+			// Get slides count
+			this.slidesCount = this.$('.js-sliderWindow').find('li').length;
 		},
 		windowWidth: null,
 		windowHeight: null,
@@ -138,9 +166,58 @@ $(function () {
 
 	/*****************
 	 *
+	 *  Router
+	 *
+	 ******************/
+
+	App.Router.App = Backbone.Router.extend({
+		routes: {
+			'': 'home',
+			'home': 'home',
+			'process': 'process',
+			'projects': 'projects',
+			'team': 'team',
+			'contacts': 'contacts'
+		},
+		setActiveSection: function (id) {
+
+		},
+		home: function () {
+			setTimeout(function () {
+				$('a[href="#home"]').click();
+			}, 1000);
+		},
+		process: function () {
+			setTimeout(function () {
+				$('a[href="#process"]').click();
+			}, 1000);
+		},
+		projects: function () {
+			setTimeout(function () {
+				$('a[href="#projects"]').click();
+			}, 1000);
+		},
+		team: function () {
+			setTimeout(function () {
+				$('a[href="#team"]').click();
+			}, 1000);
+		},
+		contacts: function () {
+			setTimeout(function () {
+				$('a[href="#contacts"]').click();
+			}, 1000);
+		}
+	});
+
+
+	/*****************
+	 *
 	 *  Initialize
 	 *
 	 ******************/
 
 	var appView = new App.Views.App();
+
+	var router = new App.Router.App();
+	Backbone.history.start();
 });
