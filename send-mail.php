@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Сообщение отправлно</title>
+	<link rel="stylesheet" href="css/colorbox.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<script src="vendors/plugins.min.js"></script>
+</body>
+</html>
+
 <?php
 // ----------------------------конфигурация-------------------------- //
 
@@ -39,10 +52,15 @@ mail("$adminemail", "$date $time Сообщение от $name", "$msg", $header
 // Выводим сообщение пользователю
 print "<script language='Javascript'><!--
 	function reload() {location = \"$backurl\"};
+	$.colorbox({
+		href:'alert.html',
+		onClosed: function(){
+			window.location.href = '/';
+		}
+	});
 	setTimeout(function(){
-		alert('Ваше сообщение отправлено. Мы скоро ответим.');
 		reload();
-	}, 500);
+	}, 3000);
 //--></script>
 ";
 exit;
