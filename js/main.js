@@ -17,8 +17,8 @@ $(function () {
 		el: '.js-app',
 		events: {
 			'click .js-goDownBtn': 'goDown',
-			'click .js-arrowLeft': 'slideLeft',
-			'click .js-arrowRight': 'slideRight'
+			'click .js-arrowLeft, .js-sliderBtnLeft': 'slideLeft',
+			'click .js-arrowRight, .js-sliderBtnRight': 'slideRight',
 		},
 		slideLeft: function (e) {
 			e.preventDefault();
@@ -29,11 +29,14 @@ $(function () {
 			if (currentSlide === 1) {
 				this.$('.js-arrowLeft').addClass('disabled');
 				this.$('.js-arrowLeftLock').show();
+				this.$('.js-sliderBtnLeft').hide();
 			} else {
 				this.$('.js-arrowLeftLock').hide();
+				this.$('.js-sliderBtnLeft').show();
 			}
 			if (currentSlide > 1) {
 				this.$('.js-arrowRightLock').hide();
+				this.$('.js-sliderBtnRight').show();
 			}
 		},
 		slideRight: function (e) {
@@ -41,15 +44,19 @@ $(function () {
 			this.$('.js-sliderRight').click();
 
 			var currentSlide = parseInt(this.$('.js-currentSlide').text(), 10);
+
 			this.$('.js-arrow').removeClass('disabled');
 			if (currentSlide === this.slidesCount) {
 				this.$('.js-arrowRight').addClass('disabled');
 				this.$('.js-arrowRightLock').show();
+				this.$('.js-sliderBtnRight').hide();
 			} else {
 				this.$('.js-arrowRightLock').hide();
+				this.$('.js-sliderBtnRight').show();
 			}
 			if (currentSlide > 1) {
 				this.$('.js-arrowLeftLock').hide();
+				this.$('.js-sliderBtnLeft').show();
 			}
 		},
 		goDown: function (e) {
@@ -104,8 +111,8 @@ $(function () {
 				filter: ':not(.external)',
 				updateHash: true,
 				currentClass: 'active',
-				beforeStart: function (e) {
-					console.log(e);
+				beforeStart: function () {
+
 				},
 				onComplete: function () {
 
@@ -156,6 +163,11 @@ $(function () {
 			setTimeout(function () {
 				self.getSizes();
 				self.setSizes();
+
+				// Calc slider buttons
+				self.$('.js-sliderBtn').css({
+					'width': (self.windowWidth - 800 - (70 * 2)) / 2
+				});
 				$(window).on('resize', function (e) {
 					self.resize(e);
 				});
