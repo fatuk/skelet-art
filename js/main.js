@@ -172,7 +172,7 @@ $(function () {
 				$(window).on('resize', function (e) {
 					self.resize(e);
 				});
-			}, 700);
+			}, 0);
 		}
 	});
 
