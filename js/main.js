@@ -19,6 +19,7 @@ $(function () {
 			'click .js-goDownBtn': 'goDown',
 			'click .js-arrowLeft, .js-sliderBtnLeft': 'slideLeft',
 			'click .js-arrowRight, .js-sliderBtnRight': 'slideRight',
+			'click .js-colorboxBtn': 'openColorbox'
 		},
 		slideLeft: function (e) {
 			e.preventDefault();
@@ -123,9 +124,7 @@ $(function () {
 			this.carousel = new Ocarousel(this.$('.ocarousel'));
 
 			// Colorbox
-			this.$('.js-colorbox').colorbox({
-				rel: 'gal'
-			});
+			this.$('.js-colorbox').colorbox();
 
 			// Get slides count
 			this.slidesCount = this.$('.js-sliderWindow').find('li').length;
@@ -136,6 +135,13 @@ $(function () {
 				self.$('.js-home').find('.wow').show();
 				new WOW().init();
 			}, 1000);
+		},
+		openColorbox: function (e) {
+			e.preventDefault();
+			var $currentTarget = $(e.currentTarget),
+				rel = $currentTarget.attr('href');
+
+			this.$('a[rel="' + rel + '"]').eq(0).click();
 		},
 		windowWidth: null,
 		windowHeight: null,
