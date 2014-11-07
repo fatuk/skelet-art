@@ -27,15 +27,17 @@ $(function () {
 
 			var currentSlide = parseInt(this.$('.js-currentSlide').text(), 10);
 			this.$('.js-arrow').removeClass('disabled');
+			console.log(currentSlide);
 			if (currentSlide === 1) {
 				this.$('.js-arrowLeft').addClass('disabled');
 				this.$('.js-arrowLeftLock').show();
+				// this.$('.js-arrowRightLock').hide();
 				this.$('.js-sliderBtnLeft').hide();
 			} else {
 				this.$('.js-arrowLeftLock').hide();
 				this.$('.js-sliderBtnLeft').show();
 			}
-			if (currentSlide > 1) {
+			if (currentSlide >= 1) {
 				this.$('.js-arrowRightLock').hide();
 				this.$('.js-sliderBtnRight').show();
 			}
@@ -45,7 +47,7 @@ $(function () {
 			this.$('.js-sliderRight').click();
 
 			var currentSlide = parseInt(this.$('.js-currentSlide').text(), 10);
-
+			console.log(currentSlide);
 			this.$('.js-arrow').removeClass('disabled');
 			if (currentSlide === this.slidesCount) {
 				this.$('.js-arrowRight').addClass('disabled');
