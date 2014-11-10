@@ -126,7 +126,28 @@ $(function () {
 			this.carousel = new Ocarousel(this.$('.ocarousel'));
 
 			// Colorbox
-			this.$('.js-colorbox').colorbox();
+			this.$('.js-colorbox').colorbox({
+				fixed: true,
+				onOpen: function () {
+					$('html').css({
+						overflow: 'hidden'
+					});
+					$('body').on({
+						'mousewheel': function (e) {
+							if ($(e.target).attr('id') !== 'cboxOverlay' && !$(e.target).hasClass('cboxPhoto')) {
+								return;
+							}
+							e.preventDefault();
+							e.stopPropagation();
+						}
+					});
+				},
+				onClosed: function () {
+					$('html').css({
+						overflow: ''
+					});
+				}
+			});
 
 			// Get slides count
 			this.slidesCount = this.$('.js-sliderWindow').find('li').length;
