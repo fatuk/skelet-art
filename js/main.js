@@ -146,7 +146,9 @@ $(function () {
 					$('html').css({
 						overflow: ''
 					});
-				}
+				},
+				maxWidth: '90%',
+				maxHeight: '90%'
 			});
 
 			// Get slides count
